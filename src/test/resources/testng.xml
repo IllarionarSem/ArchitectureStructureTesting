@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="all tests" parallel="methods" thread-count="3">
+    <test name="guitar group test">
+        <classes>
+            <class name="CategoriesPageTest"/>
+        </classes>
+    </test>
+</suite>
