@@ -1,3 +1,4 @@
+import framework.util.Logger;
 import org.testng.annotations.Test;
 import pageobject.GuitarProductPage;
 import pageobject.MainPage;
@@ -26,22 +27,25 @@ public class CategoriesPageTest extends BaseTest {
 
     @Test
     public void guitarGroupTestGuitar() {
+        Logger.startTestCase(new Throwable().getStackTrace()[0].getMethodName());
         mainPage.goToGroup(MainPage.GroupSelection.GUITAR);
-//        guitarProductPage.getProductsList().forEach(value -> Logger.info(String.format("%s: %s%n", MainPage.GroupSelection.GUITAR, value)));
-        guitarProductPage.getProductsList().forEach(value -> System.out.printf("%s: %s%n", MainPage.GroupSelection.GUITAR, value));
+        guitarProductPage.getProductsList().forEach(value -> Logger.info(String.format("%s: %s%n", MainPage.GroupSelection.GUITAR, value)));
+        Logger.endTestCase(new Throwable().getStackTrace()[0].getMethodName());
     }
 
     @Test
     public void guitarGroupTestBass() {
+        Logger.startTestCase(new Throwable().getStackTrace()[0].getMethodName());
         mainPage.goToGroup(MainPage.GroupSelection.BASS);
-//        guitarProductPage.getProductsList().forEach(value -> Logger.info(String.format("%s: %s%n", MainPage.GroupSelection.BASS, value)));
-        guitarProductPage.getProductsList().forEach(value -> System.out.printf("%s: %s%n", MainPage.GroupSelection.BASS, value));
+        guitarProductPage.getProductsList().forEach(value -> Logger.info(String.format("%s: %s%n", MainPage.GroupSelection.BASS, value)));
+        Logger.endTestCase(new Throwable().getStackTrace()[0].getMethodName());
     }
 
     @Test
     public void guitarGroupTestDJ() {
+        Logger.startTestCase(new Throwable().getStackTrace()[0].getMethodName());
         mainPage.goToGroup(MainPage.GroupSelection.DJ);
-//        guitarProductPage.getProductsList().forEach(value -> Logger.info(String.format("%s: %s%n", MainPage.GroupSelection.DJ, value)));
-        guitarProductPage.getProductsList().forEach(value -> System.out.printf("%s: %s%n", MainPage.GroupSelection.DJ, value));
+        guitarProductPage.getProductsList().forEach(value -> Logger.info(String.format("%s: %s%n", MainPage.GroupSelection.DJ, value)));
+        Logger.endTestCase(new Throwable().getStackTrace()[0].getMethodName());
     }
 }

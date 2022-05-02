@@ -16,6 +16,7 @@
         <cucumber.version>7.2.3</cucumber.version>
         <lombok.version>LATEST</lombok.version>
         <log4j.version>LATEST</log4j.version>
+        <sl4j.version>LATEST</sl4j.version>
         <webdrivermanager.version>LATEST</webdrivermanager.version>
     </properties>
 
@@ -78,6 +79,11 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.guicedee.services</groupId>
+            <artifactId>sl4j</artifactId>
+            <version>${sl4j.version}</version>
         </dependency>
     </dependencies>
 </project>

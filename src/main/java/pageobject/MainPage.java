@@ -12,6 +12,7 @@ public class MainPage extends BasePage {
         DRUM("drum"),
         DJ("dj"),
         KEYBOARD_INSTRUMENTS("keyboards instruments"),
+        PRO_AUDIO("pro audio"),
         GUITAR("guitar");
 
         private final String text;
@@ -26,13 +27,11 @@ public class MainPage extends BasePage {
     private final Button btnHome = new Button(By.xpath("//form[contains(@id,'categories')]//button"), "Home");
 
     public void goToGroup(GroupSelection groupSelection) {
-
         btnHome.click();
         getBtnGroupSelection(groupSelection).click();
     }
 
     private Button getBtnGroupSelection(GroupSelection groupSelection) {
-
         waitUtil.waitUntilAllVisible(By.xpath(String.format(XPATH_GROUP_SELECTION, groupSelection.text)));
         return new Button(By.xpath(String.format(XPATH_GROUP_SELECTION, groupSelection.text)), String.format("%s Group Button", groupSelection.text));
     }
